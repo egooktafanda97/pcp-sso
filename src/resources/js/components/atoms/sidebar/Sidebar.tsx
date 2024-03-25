@@ -34,6 +34,43 @@ export default function Sidebar() {
                             <label>Pages</label>
                             <i className="ti ti-news" />
                         </li>
+                        <li className="pc-item">
+                            <a
+                                href="../dashboard/index.html"
+                                className="pc-link"
+                            >
+                                <span className="pc-micon">
+                                    <i className="ti ti-dashboard" />
+                                </span>
+                                <span className="pc-mtext">
+                                    User Management
+                                </span>
+                            </a>
+                        </li>
+
+                        <li className="pc-item">
+                            <a
+                                href="../dashboard/index.html"
+                                className="pc-link"
+                            >
+                                <span className="pc-micon">
+                                    <i className="ti ti-dashboard" />
+                                </span>
+                                <span className="pc-mtext">Article</span>
+                            </a>
+                        </li>
+
+                        <li className="pc-item">
+                            <a
+                                href="../dashboard/index.html"
+                                className="pc-link"
+                            >
+                                <span className="pc-micon">
+                                    <i className="ti ti-dashboard" />
+                                </span>
+                                <span className="pc-mtext">Iso form</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
