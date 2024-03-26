@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Service\Auth;
+namespace App\Service\Auth;
 
 class AuthService
 {

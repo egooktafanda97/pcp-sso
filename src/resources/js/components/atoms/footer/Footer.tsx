@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="col my-1">
                         <p className="m-0">
                             Copyright ©{" "}
-                            <a href="https://codedthemes.com/" target="_blank">
+                            <a href="" target="_blank">
                                 Codedthemes
                             </a>
                         </p>
@@ -16,26 +16,17 @@ export default function Footer() {
                     <div className="col-auto my-1">
                         <ul className="list-inline footer-link mb-0">
                             <li className="list-inline-item">
-                                <a
-                                    href="https://codedthemes.com/"
-                                    target="_blank"
-                                >
+                                <a href="" target="_blank">
                                     Home
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a
-                                    href="https://codedthemes.com/privacy-policy/"
-                                    target="_blank"
-                                >
+                                <a href="" target="_blank">
                                     Privacy Policy
                                 </a>
                             </li>
                             <li className="list-inline-item">
-                                <a
-                                    href="https://codedthemes.com/contact/"
-                                    target="_blank"
-                                >
+                                <a href="" target="_blank">
                                     Contact us
                                 </a>
                             </li>

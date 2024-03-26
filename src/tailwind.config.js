@@ -2,12 +2,13 @@ import defaultTheme from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: "class",
+    // darkMode: "class",
     content: [
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
         "./resources/js/**/*.tsx",
+        "./node_modules/flowbite/**/*.js",
     ],
 
     theme: {
@@ -96,5 +97,6 @@ export default {
     plugins: [
         require("tailwindcss-animate"),
         require("@tailwindcss/typography"),
+        require("flowbite/plugin"),
     ],
 };
