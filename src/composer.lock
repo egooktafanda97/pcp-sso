@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06b2d6f80192fdc36566fb1d65aaea2f",
+    "content-hash": "6d4aaa537be1007e6825e76c3dde8005",
     "packages": [
         {
             "name": "brick/math",
@@ -10562,8 +10562,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./pkg/talium_attribute-laravel",
-                "reference": "dbb7005570c45f97fd04fb481cabb361cb0557ad"
+                "url": "./package/talium_attribute-laravel",
+                "reference": "964b2679953d89fe3275199cf535fbf153e0b714"
             },
             "require": {
                 "illuminate/support": "^9.0||^10.0||^11.0",
