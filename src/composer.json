@@ -35,7 +35,7 @@
     },
     "repositories": [{
         "type": "path",
-        "url": "./pkg/*"
+        "url": "./package/*"
     }],
     "autoload": {
         "psr-4": {
