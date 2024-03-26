@@ -49,10 +49,7 @@ export default function Sidebar() {
                         </li>
 
                         <li className="pc-item">
-                            <a
-                                href="../dashboard/index.html"
-                                className="pc-link"
-                            >
+                            <a href="/article" className="pc-link">
                                 <span className="pc-micon">
                                     <i className="ti ti-dashboard" />
                                 </span>
