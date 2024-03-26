@@ -159,7 +159,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        TaliumAttributes\Provider\TaliumAttributesServiceProvider::class,
         /*
          * Application Service Providers...
          */
