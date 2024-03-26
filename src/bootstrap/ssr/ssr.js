@@ -225,10 +225,10 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
     k2 = a2 ? T2.sort(a2) : T2;
   }
   for (var N2 = 0; N2 < k2.length; ++N2) {
-    var C2 = k2[N2], D2 = "object" == typeof C2 && void 0 !== C2.value ? C2.value : h2[C2];
-    if (!i2 || null !== D2) {
-      var $2 = g(h2) ? "function" == typeof n2 ? n2(e2, C2) : e2 : e2 + (c2 ? "." + C2 : "[" + C2 + "]");
-      w(x2, t3(D2, $2, n2, o2, i2, u2, f2, a2, c2, l2, s2, v2, p2, y2));
+    var C2 = k2[N2], A2 = "object" == typeof C2 && void 0 !== C2.value ? C2.value : h2[C2];
+    if (!i2 || null !== A2) {
+      var D2 = g(h2) ? "function" == typeof n2 ? n2(e2, C2) : e2 : e2 + (c2 ? "." + C2 : "[" + C2 + "]");
+      w(x2, t3(A2, D2, n2, o2, i2, u2, f2, a2, c2, l2, s2, v2, p2, y2));
     }
   }
   return x2;
@@ -238,7 +238,7 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
   });
 }, C = function(t4, r2) {
   return t4 && "string" == typeof t4 && r2.comma && t4.indexOf(",") > -1 ? t4.split(",") : t4;
-}, D = function(t4, r2, e2, n2) {
+}, A = function(t4, r2, e2, n2) {
   if (t4) {
     var o2 = e2.allowDots ? t4.replace(/\.([^.[]+)/g, "[$1]") : t4, i2 = /(\[[^[\]]*])/g, u2 = e2.depth > 0 && /(\[[^[\]]*])/.exec(o2), f2 = u2 ? o2.slice(0, u2.index) : o2, a2 = [];
     if (f2) {
@@ -266,7 +266,7 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
       return o3;
     }(a2, r2, e2, n2);
   }
-}, $ = function(t4, r2) {
+}, D = function(t4, r2) {
   var e2 = function(t5) {
     if (!t5)
       return T;
@@ -292,11 +292,11 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
       }
     return n3;
   }(t4, e2) : t4, o2 = e2.plainObjects ? /* @__PURE__ */ Object.create(null) : {}, i2 = Object.keys(n2), u2 = 0; u2 < i2.length; ++u2) {
-    var f2 = i2[u2], a2 = D(f2, n2[f2], e2, "string" == typeof t4);
+    var f2 = i2[u2], a2 = A(f2, n2[f2], e2, "string" == typeof t4);
     o2 = d.merge(o2, a2, e2);
   }
   return d.compact(o2);
-}, F = /* @__PURE__ */ function() {
+}, $ = /* @__PURE__ */ function() {
   function t4(t5, r2, e3) {
     var n2, o2;
     this.name = t5, this.definition = r2, this.bindings = null != (n2 = r2.bindings) ? n2 : {}, this.wheres = null != (o2 = r2.wheres) ? o2 : {}, this.config = e3;
@@ -313,7 +313,7 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
     if (u2) {
       for (var f2 in u2.groups)
         u2.groups[f2] = "string" == typeof u2.groups[f2] ? decodeURIComponent(u2.groups[f2]) : u2.groups[f2];
-      return { params: u2.groups, query: $(i2) };
+      return { params: u2.groups, query: D(i2) };
     }
     return false;
   }, e2.compile = function(t5) {
@@ -337,14 +337,14 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
       return { name: t6.replace(/{|\??}/g, ""), required: !/\?}$/.test(t6) };
     })) ? t5 : [];
   } }]), t4;
-}(), P = /* @__PURE__ */ function(t4) {
+}(), F = /* @__PURE__ */ function(t4) {
   var n2, i2;
   function u2(r2, n3, o2, i3) {
     var u3;
     if (void 0 === o2 && (o2 = true), (u3 = t4.call(this) || this).t = null != i3 ? i3 : "undefined" != typeof Ziggy ? Ziggy : null == globalThis ? void 0 : globalThis.Ziggy, u3.t = e({}, u3.t, { absolute: o2 }), r2) {
       if (!u3.t.routes[r2])
         throw new Error("Ziggy error: route '" + r2 + "' is not in the route list.");
-      u3.i = new F(r2, u3.t.routes[r2], u3.t), u3.u = u3.l(n3);
+      u3.i = new $(r2, u3.t.routes[r2], u3.t), u3.u = u3.l(n3);
     }
     return u3;
   }
@@ -398,7 +398,7 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
     var r2 = this;
     t5 ? this.t.absolute && t5.startsWith("/") && (t5 = this.p().host + t5) : t5 = this.h();
     var n3 = {}, o2 = Object.entries(this.t.routes).find(function(e2) {
-      return n3 = new F(e2[0], e2[1], r2.t).matchesUrl(t5);
+      return n3 = new $(e2[0], e2[1], r2.t).matchesUrl(t5);
     }) || [void 0, void 0];
     return e({ name: o2[0] }, n3, { route: o2[1] });
   }, f2.h = function() {
@@ -411,16 +411,21 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
     var a2 = new RegExp("^" + t5.replace(/\./g, "\\.").replace(/\*/g, ".*") + "$").test(o2);
     if ([null, void 0].includes(r2) || !a2)
       return a2;
-    var c2 = new F(o2, f3, this.t);
+    var c2 = new $(o2, f3, this.t);
     r2 = this.l(r2, c2);
     var l2 = e({}, i3, u3);
     return !(!Object.values(r2).every(function(t6) {
       return !t6;
     }) || Object.values(l2).some(function(t6) {
       return void 0 !== t6;
-    })) || Object.entries(r2).every(function(t6) {
-      return l2[t6[0]] == t6[1];
-    });
+    })) || function t6(r3, e2) {
+      return Object.entries(r3).every(function(r4) {
+        var n4 = r4[0], o3 = r4[1];
+        return Array.isArray(o3) && Array.isArray(e2[n4]) ? o3.every(function(t7) {
+          return e2[n4].includes(t7);
+        }) : "object" == typeof o3 && "object" == typeof e2[n4] && null !== o3 && null !== e2[n4] ? t6(o3, e2[n4]) : e2[n4] == o3;
+      });
+    }(r2, l2);
   }, f2.p = function() {
     var t5, r2, e2, n3, o2, i3, u3 = "undefined" != typeof window ? window.location : {}, f3 = u3.host, a2 = u3.pathname, c2 = u3.search;
     return { host: null != (t5 = null == (r2 = this.t.location) ? void 0 : r2.host) ? t5 : void 0 === f3 ? "" : f3, pathname: null != (e2 = null == (n3 = this.t.location) ? void 0 : n3.pathname) ? e2 : void 0 === a2 ? "" : a2, search: null != (o2 = null == (i3 = this.t.location) ? void 0 : i3.search) ? o2 : void 0 === c2 ? "" : c2 };
@@ -474,8 +479,8 @@ var f = String.prototype.replace, a = /%20/g, c = "RFC3986", l = { default: c, f
     return e({}, t5.params, t5.query);
   } }]), u2;
 }(/* @__PURE__ */ u(String));
-function A(t4, r2, e2, n2) {
-  var o2 = new P(t4, r2, e2, n2);
+function P(t4, r2, e2, n2) {
+  var o2 = new F(t4, r2, e2, n2);
   return t4 ? o2.toString() : o2;
 }
 const appName = "Laravel";
@@ -484,9 +489,9 @@ createServer(
     page,
     render: ReactDOMServer.renderToString,
     title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./pages/Auth/Login.tsx": () => import("./assets/Login-4054de0a.js"), "./pages/Auth/SignIn.tsx": () => import("./assets/SignIn-2f03f0af.js"), "./pages/home/index.tsx": () => import("./assets/index-525539c1.js") })),
+    resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./pages/Article/create.tsx": () => import("./assets/create-93c6e61f.js"), "./pages/Article/show.tsx": () => import("./assets/show-bdbad3fb.js"), "./pages/Auth/Login.tsx": () => import("./assets/Login-4054de0a.js"), "./pages/Auth/SignIn.tsx": () => import("./assets/SignIn-2f03f0af.js"), "./pages/home/index.tsx": () => import("./assets/index-bbdf98cb.js") })),
     setup: ({ App, props }) => {
-      global.route = (name, params, absolute) => A(name, params, absolute, {
+      global.route = (name, params, absolute) => P(name, params, absolute, {
         // @ts-expect-error
         ...page.props.ziggy,
         // @ts-expect-error
