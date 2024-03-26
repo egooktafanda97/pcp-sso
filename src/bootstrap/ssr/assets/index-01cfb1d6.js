@@ -1,5 +1,5 @@
 import { jsx, jsxs } from "react/jsx-runtime";
-import { L as Layouts } from "./Layout-d0aa4f86.js";
+import { L as Layouts } from "./Layout-0c4006d1.js";
 const Home = () => {
   return /* @__PURE__ */ jsx(Layouts, { children: /* @__PURE__ */ jsx("div", { className: "row", children: /* @__PURE__ */ jsx("div", { className: "col-md-4", children: /* @__PURE__ */ jsx("div", { className: "w-full grid mt-12  lg:mt-5 ", children: /* @__PURE__ */ jsxs(
     "a",

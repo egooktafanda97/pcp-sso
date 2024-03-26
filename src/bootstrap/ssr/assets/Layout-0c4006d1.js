@@ -382,17 +382,10 @@ function Sidebar() {
           ]
         }
       ) }),
-      /* @__PURE__ */ jsx("li", { className: "pc-item", children: /* @__PURE__ */ jsxs(
-        "a",
-        {
-          href: "../dashboard/index.html",
-          className: "pc-link",
-          children: [
-            /* @__PURE__ */ jsx("span", { className: "pc-micon", children: /* @__PURE__ */ jsx("i", { className: "ti ti-dashboard" }) }),
-            /* @__PURE__ */ jsx("span", { className: "pc-mtext", children: "Article" })
-          ]
-        }
-      ) }),
+      /* @__PURE__ */ jsx("li", { className: "pc-item", children: /* @__PURE__ */ jsxs("a", { href: "/article", className: "pc-link", children: [
+        /* @__PURE__ */ jsx("span", { className: "pc-micon", children: /* @__PURE__ */ jsx("i", { className: "ti ti-dashboard" }) }),
+        /* @__PURE__ */ jsx("span", { className: "pc-mtext", children: "Article" })
+      ] }) }),
       /* @__PURE__ */ jsx("li", { className: "pc-item", children: /* @__PURE__ */ jsxs(
         "a",
         {

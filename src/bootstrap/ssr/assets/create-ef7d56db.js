@@ -1,6 +1,6 @@
 import { jsx, jsxs } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
-import { L as Layouts } from "./Layout-d0aa4f86.js";
+import { L as Layouts } from "./Layout-0c4006d1.js";
 import { Editor } from "@tinymce/tinymce-react";
 import { usePage, useForm } from "@inertiajs/react";
 const Create = (props) => {
