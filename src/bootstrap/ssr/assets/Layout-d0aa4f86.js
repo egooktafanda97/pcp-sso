@@ -370,7 +370,40 @@ function Sidebar() {
       /* @__PURE__ */ jsxs("li", { className: "pc-item pc-caption", children: [
         /* @__PURE__ */ jsx("label", { children: "Pages" }),
         /* @__PURE__ */ jsx("i", { className: "ti ti-news" })
-      ] })
+      ] }),
+      /* @__PURE__ */ jsx("li", { className: "pc-item", children: /* @__PURE__ */ jsxs(
+        "a",
+        {
+          href: "../dashboard/index.html",
+          className: "pc-link",
+          children: [
+            /* @__PURE__ */ jsx("span", { className: "pc-micon", children: /* @__PURE__ */ jsx("i", { className: "ti ti-dashboard" }) }),
+            /* @__PURE__ */ jsx("span", { className: "pc-mtext", children: "User Management" })
+          ]
+        }
+      ) }),
+      /* @__PURE__ */ jsx("li", { className: "pc-item", children: /* @__PURE__ */ jsxs(
+        "a",
+        {
+          href: "../dashboard/index.html",
+          className: "pc-link",
+          children: [
+            /* @__PURE__ */ jsx("span", { className: "pc-micon", children: /* @__PURE__ */ jsx("i", { className: "ti ti-dashboard" }) }),
+            /* @__PURE__ */ jsx("span", { className: "pc-mtext", children: "Article" })
+          ]
+        }
+      ) }),
+      /* @__PURE__ */ jsx("li", { className: "pc-item", children: /* @__PURE__ */ jsxs(
+        "a",
+        {
+          href: "../dashboard/index.html",
+          className: "pc-link",
+          children: [
+            /* @__PURE__ */ jsx("span", { className: "pc-micon", children: /* @__PURE__ */ jsx("i", { className: "ti ti-dashboard" }) }),
+            /* @__PURE__ */ jsx("span", { className: "pc-mtext", children: "Iso form" })
+          ]
+        }
+      ) })
     ] }) })
   ] }) });
 }
@@ -379,33 +412,12 @@ function Footer() {
     /* @__PURE__ */ jsx("div", { className: "col my-1", children: /* @__PURE__ */ jsxs("p", { className: "m-0", children: [
       "Copyright ©",
       " ",
-      /* @__PURE__ */ jsx("a", { href: "https://codedthemes.com/", target: "_blank", children: "Codedthemes" })
+      /* @__PURE__ */ jsx("a", { href: "", target: "_blank", children: "Codedthemes" })
     ] }) }),
     /* @__PURE__ */ jsx("div", { className: "col-auto my-1", children: /* @__PURE__ */ jsxs("ul", { className: "list-inline footer-link mb-0", children: [
-      /* @__PURE__ */ jsx("li", { className: "list-inline-item", children: /* @__PURE__ */ jsx(
-        "a",
-        {
-          href: "https://codedthemes.com/",
-          target: "_blank",
-          children: "Home"
-        }
-      ) }),
-      /* @__PURE__ */ jsx("li", { className: "list-inline-item", children: /* @__PURE__ */ jsx(
-        "a",
-        {
-          href: "https://codedthemes.com/privacy-policy/",
-          target: "_blank",
-          children: "Privacy Policy"
-        }
-      ) }),
-      /* @__PURE__ */ jsx("li", { className: "list-inline-item", children: /* @__PURE__ */ jsx(
-        "a",
-        {
-          href: "https://codedthemes.com/contact/",
-          target: "_blank",
-          children: "Contact us"
-        }
-      ) })
+      /* @__PURE__ */ jsx("li", { className: "list-inline-item", children: /* @__PURE__ */ jsx("a", { href: "", target: "_blank", children: "Home" }) }),
+      /* @__PURE__ */ jsx("li", { className: "list-inline-item", children: /* @__PURE__ */ jsx("a", { href: "", target: "_blank", children: "Privacy Policy" }) }),
+      /* @__PURE__ */ jsx("li", { className: "list-inline-item", children: /* @__PURE__ */ jsx("a", { href: "", target: "_blank", children: "Contact us" }) })
     ] }) })
   ] }) }) });
 }
@@ -418,30 +430,6 @@ function Layouts({ children }) {
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
-const Home = () => {
-  return /* @__PURE__ */ jsx(Layouts, { children: /* @__PURE__ */ jsx("div", { className: "row", children: /* @__PURE__ */ jsx("div", { className: "col-md-4", children: /* @__PURE__ */ jsx("div", { className: "w-full grid mt-12  lg:mt-5 ", children: /* @__PURE__ */ jsxs(
-    "a",
-    {
-      href: "#",
-      className: "transition-all pb-5 duration-1000  bg-[#fff] rounded-sm overflow-hidden shadow-md  hover:bg-[#1c76da]  hover:shadow-xl m-2 relative z-40 group",
-      children: [
-        /* @__PURE__ */ jsx(
-          "img",
-          {
-            src: "/img/items/dashops.png",
-            alt: "",
-            className: "w-full h-[300px]"
-          }
-        ),
-        /* @__PURE__ */ jsx("div", { className: " absolute  bg-blue-500/50 top-0 left-0 w-24 h-1 z-30  transition-all duration-200   group-hover:bg-white group-hover:w-1/2  " }),
-        /* @__PURE__ */ jsxs("div", { className: "py-2 px-9 relative  ", children: [
-          /* @__PURE__ */ jsx("h3", { className: "mt-8 text-lg font-semibold text-gray-800 group-hover:text-white  ", children: "DASHBOARD OPERASIONAL" }),
-          /* @__PURE__ */ jsx("p", { className: "mt-4 text-base text-gray-600 group-hover:text-white  ", children: "Dashboard operasional untuk memantau seluruh kegiatan operasional base data Airwaybill" })
-        ] })
-      ]
-    }
-  ) }) }) }) });
-};
 export {
-  Home as default
+  Layouts as L
 };
