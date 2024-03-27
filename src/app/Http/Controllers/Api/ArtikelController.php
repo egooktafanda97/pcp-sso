@@ -22,12 +22,12 @@ use TaliumAttributes\Collection\Rutes\Post;
 class ArtikelController extends Controller
 {
     #[Get("")]
-    public function top_tree_show(ArtikelService $artikelServices)
+    public function top_tree_show(ArtikelService $artikelServices, Request $request)
     {
         try {
-            return response()->json($artikelServices->top_tree_desc()->map(function ($x) {
-                $thmPath = asset("file/article");
-                $x->thm_path = $thmPath;
+            $lang = empty($request->get("lang")) ? "ID" : "EN";
+            return response()->json($artikelServices->top_tree_desc($lang)->map(function ($x) {
+                $x->base64  = "data:image/jpg;base64," . base64_encode(file_get_contents(url("/file/article") . "/" . $x->thm));
                 return $x;
             }), 200);
         } catch (\Throwable $th) {
