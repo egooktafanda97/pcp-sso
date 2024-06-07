@@ -489,7 +489,7 @@ createServer(
     page,
     render: ReactDOMServer.renderToString,
     title: (title) => `${title} - ${appName}`,
-    resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./pages/Article/create.tsx": () => import("./assets/create-ef7d56db.js"), "./pages/Article/show.tsx": () => import("./assets/show-c5d4a98a.js"), "./pages/Auth/Login.tsx": () => import("./assets/Login-4054de0a.js"), "./pages/Auth/SignIn.tsx": () => import("./assets/SignIn-2f03f0af.js"), "./pages/home/index.tsx": () => import("./assets/index-01cfb1d6.js") })),
+    resolve: (name) => resolvePageComponent(`./pages/${name}.tsx`, /* @__PURE__ */ Object.assign({ "./pages/Article/create.tsx": () => import("./assets/create-a908efd4.js"), "./pages/Article/show.tsx": () => import("./assets/show-c5d4a98a.js"), "./pages/Auth/Login.tsx": () => import("./assets/Login-4054de0a.js"), "./pages/Auth/SignIn.tsx": () => import("./assets/SignIn-2f03f0af.js"), "./pages/home/index.tsx": () => import("./assets/index-1a026410.js") })),
     setup: ({ App, props }) => {
       global.route = (name, params, absolute) => P(name, params, absolute, {
         // @ts-expect-error

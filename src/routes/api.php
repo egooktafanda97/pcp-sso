@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::get("/me", [\App\Http\Controllers\Api\ApiAuthenticationControler::class, "getMe"]);
-Route::group(["middleware" => "auth:api"], function () {
-    Route::get("/me", [\App\Http\Controllers\Api\ApiAuthenticationControler::class, "getMe"]);
-});
+// Route::group(["middleware" => "auth:api"], function () {
+//     Route::get("/me", [\App\Http\Controllers\Api\ApiAuthenticationControler::class, "getMe"]);
+// });
 Route::get("/direc", [\App\Http\Controllers\Api\DirectLoginController::class, "directLogin"]);

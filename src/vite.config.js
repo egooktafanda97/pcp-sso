@@ -4,10 +4,21 @@ import laravel from "laravel-vite-plugin";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
+    // server: {
+    //     host: "0.0.0.0",
+    //     hmr: {
+    //         host: "127.0.0.1",
+    //     },
+    // },
     server: {
         host: "0.0.0.0",
+        port: 5173,
         hmr: {
-            host: "127.0.0.1",
+            protocol: "ws",
+            host: "115.178.128.139",
+        },
+        cors: {
+            origin: "*",
         },
     },
     plugins: [

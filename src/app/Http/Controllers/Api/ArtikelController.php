@@ -17,11 +17,10 @@ use TaliumAttributes\Collection\Rutes\Name;
 use TaliumAttributes\Collection\Rutes\Post;
 
 #[RestController()]
-#[Group(["name" => "article", "prefix" => "article"])]
-#[Name("article")]
+#[Group(prefix: 'article', name: 'article', middleware: ['auth'])]
 class ArtikelController extends Controller
 {
-    #[Get("")]
+    #[Get("/top-three")]
     public function top_tree_show(ArtikelService $artikelServices, Request $request)
     {
         try {

@@ -8,9 +8,7 @@ interface Props {
 }
 
 const Create = (props: any) => {
-    const [value, setValue] = useState(
-        "<p>The quick brown fox jumps over the lazy dog</p>",
-    );
+    const [value, setValue] = useState("");
     const [text, setText] = useState("");
     const [title, setTitle] = useState("");
 
@@ -19,6 +17,7 @@ const Create = (props: any) => {
         title: null,
         thm: null,
         content: null,
+        lang: null,
     });
 
     const handleSubmit = (e: any) => {
@@ -81,6 +80,16 @@ const Create = (props: any) => {
                                     }
                                     type="file"
                                 />
+                                <select
+                                    className="block w-full ml-2 mr-2 text-xs text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none  dark:border-gray-600 dark:placeholder-gray-400"
+                                    onChange={(e: any) =>
+                                        setData("lang", e.target.value)
+                                    }
+                                >
+                                    <option value="">pilih bahasa</option>
+                                    <option value="ID">ID</option>
+                                    <option value="EN">EN</option>
+                                </select>
                                 <div>
                                     <button
                                         type="submit"
