@@ -31,7 +31,7 @@
         "pestphp/pest-plugin-laravel": "^2.2",
         "spatie/laravel-ignition": "^2.3",
         "tightenco/duster": "^2.4",
-        "talium_attribute/laravel": "dev-main"
+        "talium_attribute/egooktafanda": "dev-main"
     },
     "repositories": [{
         "type": "path",

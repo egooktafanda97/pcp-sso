@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layouts from "../../components/layouts/Layout";
+import { usePage } from "@inertiajs/inertia-react";
 
 const Home = () => {
+    const { appServiceData } = usePage().props;
+
+    useEffect(() => {
+        console.log(appServiceData);
+    });
     return (
         <Layouts>
             <div className="row">

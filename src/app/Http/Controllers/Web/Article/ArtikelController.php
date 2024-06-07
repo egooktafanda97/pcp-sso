@@ -16,9 +16,7 @@ use TaliumAttributes\Collection\Rutes\Name;
 use TaliumAttributes\Collection\Rutes\Post;
 
 #[Controllers()]
-#[Group(["name" => "article", "prefix" => "article"])]
-#[Name("article")]
-#[Middleware("auth")]
+#[Group(prefix: 'article', name: 'article', middleware: ['auth'])]
 class ArtikelController extends Controller
 {
     #[Get("")]
@@ -42,6 +40,7 @@ class ArtikelController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:200',
             'content' => 'required|string',
+            'lang' => 'nullable|string',
             'thm' => 'nullable|file|max:200',
             'is_type' => 'nullable|string|max:20',
         ]);
