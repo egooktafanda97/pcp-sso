@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('artikel', function (Blueprint $table) {
             $table->bigIncrements("id");
+            $table->string("uuid", 100)->unique();
             $table->unsignedBigInteger("user_id"); // Menggunakan unsignedBigInteger untuk foreign key
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade'); // Menambahkan foreign key
             $table->string("lang", 10)->default("ID");

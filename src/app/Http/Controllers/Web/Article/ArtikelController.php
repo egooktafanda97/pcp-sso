@@ -14,6 +14,7 @@ use TaliumAttributes\Collection\Rutes\Group;
 use TaliumAttributes\Collection\Rutes\Middleware;
 use TaliumAttributes\Collection\Rutes\Name;
 use TaliumAttributes\Collection\Rutes\Post;
+use Illuminate\Support\Str;
 
 #[Controllers()]
 #[Group(prefix: 'article', name: 'article', middleware: ['auth'])]
@@ -58,7 +59,10 @@ class ArtikelController extends Controller
         } catch (\Throwable $e) {
             return to_route('article.create')->with("errors", $e->getMessage());
         }
-        $artikelService->store(collect($data)->merge(["user_id" => auth()->user()->id])->toArray());
+        $artikelService->store(collect($data)->merge([
+            "uuid" => Str::uuid(),
+            "user_id" => auth()->user()->id
+        ])->toArray());
         return Inertia::location(route('article.show'));
     }
 }

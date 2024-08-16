@@ -10,7 +10,13 @@ class Artikel extends Model
     use HasFactory;
     protected $table = "artikel";
     protected $fillable = [
-        'user_id', 'lang', 'title', 'content', 'thm', 'is_type'
+        'user_id',
+        'uuid',
+        'lang',
+        'title',
+        'content',
+        'thm',
+        'is_type'
     ];
 
     public function user()
